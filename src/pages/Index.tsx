@@ -37,10 +37,10 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
 }
 
 const schedule = [
-  { time: "11:00", icon: "Heart", title: "Регистрация брака", desc: "Торжественная церемония в Дворце бракосочетания", color: "#e8c4d4" },
-  { time: "13:00", icon: "Camera", title: "Фотосессия", desc: "Прогулка по Александровскому саду", color: "#f0d5c8" },
-  { time: "16:00", icon: "Car", title: "Поездка", desc: "Путешествие к месту проведения торжества", color: "#d4e0c4" },
-  { time: "18:00", icon: "UtensilsCrossed", title: "Праздничный ужин", desc: "Банкетный зал «Белая роза»", color: "#c4d4e8" },
+  { time: "11:00", icon: "Heart", title: "Торжественная регистрация брака", desc: "ЗАГС Красносельского района, ул. Доблести, д. 36", color: "#e8c4d4" },
+  { time: "11:30", icon: "Camera", title: "Фотосессия", desc: "Фотопрогулка возле ЗАГСа", color: "#f0d5c8" },
+  { time: "14:00", icon: "Car", title: "Поездка в Петергоф", desc: "Прогулка в Нижнем парке среди фонтанов", color: "#d4e0c4" },
+  { time: "17:30", icon: "UtensilsCrossed", title: "Торжественный ужин", desc: "Праздничный банкет в честь молодожёнов", color: "#c4d4e8" },
 ];
 
 const loveStory = [
@@ -57,7 +57,7 @@ const galleryImages = [
 
 export default function Index() {
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  const weddingDate = new Date("2025-08-30T11:00:00");
+  const weddingDate = new Date("2026-08-01T11:00:00");
 
   useEffect(() => {
     const tick = () => {
@@ -142,14 +142,14 @@ export default function Index() {
             style={{ animationName: "fadeIn", animationDuration: "1s", animationDelay: "1s", animationFillMode: "forwards" }}
           >
             <div className="h-px w-16" style={{ background: "rgba(249,212,226,0.7)" }} />
-            <span className="font-cormorant text-2xl italic font-light" style={{ color: "#f9d4e2" }}>30 августа 2025</span>
+            <span className="font-cormorant text-2xl italic font-light" style={{ color: "#f9d4e2" }}>1 августа 2026</span>
             <div className="h-px w-16" style={{ background: "rgba(249,212,226,0.7)" }} />
           </div>
           <p
             className="mt-4 text-lg font-light opacity-0"
             style={{ color: "rgba(255,240,235,0.85)", animationName: "fadeIn", animationDuration: "1s", animationDelay: "1.3s", animationFillMode: "forwards" }}
           >
-            Москва, Банкетный зал «Белая роза»
+            Санкт-Петербург, ЗАГС Красносельского района
           </p>
         </div>
 
@@ -203,9 +203,9 @@ export default function Index() {
 
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { icon: "Calendar", title: "Дата", value: "30 августа 2025", sub: "суббота" },
+                { icon: "Calendar", title: "Дата", value: "1 августа 2026", sub: "суббота" },
                 { icon: "Clock", title: "Время", value: "11:00", sub: "начало церемонии" },
-                { icon: "MapPin", title: "Место", value: "Банкетный зал", sub: "«Белая роза», Москва" },
+                { icon: "MapPin", title: "Место", value: "ЗАГС Красносельского р-на", sub: "ул. Доблести, д. 36, СПб" },
               ].map(({ icon, title, value, sub }) => (
                 <div
                   key={title}
@@ -367,7 +367,7 @@ export default function Index() {
             </h2>
             <div className="flex items-center justify-center gap-4 mt-6">
               <div className="h-px w-16" style={{ background: "rgba(249,200,222,0.4)" }} />
-              <span className="font-cormorant text-xl italic font-light" style={{ color: "#f9c8de" }}>30 августа 2025</span>
+              <span className="font-cormorant text-xl italic font-light" style={{ color: "#f9c8de" }}>1 августа 2026</span>
               <div className="h-px w-16" style={{ background: "rgba(249,200,222,0.4)" }} />
             </div>
             <button
@@ -383,7 +383,7 @@ export default function Index() {
       {/* FOOTER */}
       <footer className="py-8 text-center" style={{ background: "#3a1a28" }}>
         <p className="font-cormorant text-xl italic font-light" style={{ color: "rgba(249,200,222,0.7)" }}>
-          Руслан & Анастасия 🌸 30.08.2025
+          Руслан & Анастасия 🌸 01.08.2026
         </p>
       </footer>
     </div>
