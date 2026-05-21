@@ -135,7 +135,7 @@ export default function Index() {
               animationFillMode: "forwards",
             }}
           >
-            Анна & Михаил
+            Руслан & Анастасия
           </h1>
           <div
             className="flex items-center justify-center gap-4 mt-6 opacity-0"
@@ -383,7 +383,7 @@ export default function Index() {
       {/* FOOTER */}
       <footer className="py-8 text-center" style={{ background: "#3a1a28" }}>
         <p className="font-cormorant text-xl italic font-light" style={{ color: "rgba(249,200,222,0.7)" }}>
-          Анна & Михаил 🌸 30.08.2025
+          Руслан & Анастасия 🌸 30.08.2025
         </p>
       </footer>
     </div>
