@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+			"./1779380780451586403.html"
 	],
 	prefix: "",
 	theme: {
@@ -17,8 +18,39 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+		fontFamily: {
+			cormorant: ['Cormorant Garamond', 'serif'],
+			caveat: ['Caveat', 'cursive'],
+			montserrat: ['Montserrat', 'sans-serif'],
+		},
 		extend: {
 			colors: {
+				rose: {
+					50: '#fff0f3',
+					100: '#ffe0e8',
+					200: '#ffc6d5',
+					300: '#ff9ab5',
+					400: '#ff6090',
+					500: '#ff2d6f',
+					600: '#f00d55',
+					700: '#ca0447',
+					800: '#a80740',
+					900: '#8f0a3a',
+				},
+				blush: {
+					50: '#fdf6f8',
+					100: '#fce8ef',
+					200: '#f9d4e2',
+					300: '#f4b0c9',
+					400: '#ec7da6',
+					500: '#e05586',
+					600: '#cd3669',
+					700: '#ac2555',
+					800: '#8f2249',
+					900: '#7a2041',
+				},
+				cream: '#fdf8f4',
+				petal: '#f9eff4',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -88,7 +120,32 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-up': 'fadeUp 0.8s ease-out forwards',
+				'fade-in': 'fadeIn 1s ease-out forwards',
+				'float': 'float 6s ease-in-out infinite',
+				'petal-fall': 'petalFall 8s linear infinite',
+			},
+			keyframes: {
+				...{},
+				fadeUp: {
+					'0%': { opacity: '0', transform: 'translateY(30px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' },
+				},
+				fadeIn: {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' },
+				},
+				float: {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
+				petalFall: {
+					'0%': { transform: 'translateY(-20px) rotate(0deg)', opacity: '0' },
+					'10%': { opacity: '1' },
+					'90%': { opacity: '0.7' },
+					'100%': { transform: 'translateY(100vh) rotate(360deg)', opacity: '0' },
+				},
 			}
 		}
 	},
