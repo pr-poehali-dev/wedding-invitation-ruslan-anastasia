@@ -46,8 +46,10 @@ const schedule = [
 
 const galleryImages = [
   { src: COUPLE_PHOTO, caption: "Наш день" },
-  { src: VENUE_PHOTO, caption: "Место праздника" },
-  { src: STORY_PHOTO, caption: "История любви" },
+  { src: "https://cdn.poehali.dev/projects/5373c500-55d4-493a-9aef-b36641f8d934/bucket/cb9d5ab6-4b43-466b-a86c-1cd2c98b3794.jpg", caption: "В Эрмитаже" },
+  { src: "https://cdn.poehali.dev/projects/5373c500-55d4-493a-9aef-b36641f8d934/bucket/b02a2168-8e7a-476b-847c-6b7234c6fe69.jpg", caption: "Зимний вечер" },
+  { src: "https://cdn.poehali.dev/projects/5373c500-55d4-493a-9aef-b36641f8d934/bucket/7157c8f0-570c-491d-a1e7-ec344b0a469d.jpg", caption: "Весна" },
+  { src: "https://cdn.poehali.dev/projects/5373c500-55d4-493a-9aef-b36641f8d934/bucket/2dd32005-f655-4d76-930c-24ca1170bd25.jpg", caption: "Дворцовая площадь" },
 ];
 
 export default function Index() {
@@ -301,23 +303,25 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Мозаичная сетка */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {galleryImages.map((img, i) => (
                 <div
                   key={i}
-                  className="relative rounded-3xl overflow-hidden group cursor-pointer shadow-md hover:shadow-2xl transition-shadow duration-500"
-                  style={{ aspectRatio: i === 1 ? "3/4" : "4/3" }}
+                  className={`relative rounded-2xl overflow-hidden group cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] ${i === 0 ? "col-span-2 md:col-span-1 md:row-span-2" : ""}`}
+                  style={{ aspectRatio: i === 0 ? "3/4" : i === 4 ? "16/9" : "4/3", gridColumn: i === 4 ? "span 2" : undefined }}
                 >
                   <img
                     src={img.src}
                     alt={img.caption}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    style={{ objectPosition: i === 0 ? "top" : "center" }}
                   />
                   <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
-                    style={{ background: "linear-gradient(to top, rgba(90,42,58,0.7) 0%, transparent 60%)" }}
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5"
+                    style={{ background: "linear-gradient(to top, rgba(90,20,40,0.75) 0%, transparent 60%)" }}
                   >
-                    <p className="font-cormorant text-white text-xl italic">{img.caption}</p>
+                    <p className="font-cormorant text-white text-lg italic">{img.caption}</p>
                   </div>
                 </div>
               ))}
