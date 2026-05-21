@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Icon from "@/components/ui/icon";
 
-const COUPLE_PHOTO = "https://cdn.poehali.dev/projects/5373c500-55d4-493a-9aef-b36641f8d934/files/d427f1de-9dfe-41f4-b9c5-bac52be986fa.jpg";
+const COUPLE_PHOTO = "https://cdn.poehali.dev/projects/5373c500-55d4-493a-9aef-b36641f8d934/bucket/d77f210b-7202-4398-98a4-b156629a4f0a.jpg";
 const VENUE_PHOTO = "https://cdn.poehali.dev/projects/5373c500-55d4-493a-9aef-b36641f8d934/files/937715c3-3c5f-4182-bc4a-f456633c89fe.jpg";
 const STORY_PHOTO = "https://cdn.poehali.dev/projects/5373c500-55d4-493a-9aef-b36641f8d934/files/62d131ba-b1b6-4626-af1c-41deeafa49ed.jpg";
 
@@ -96,64 +96,107 @@ export default function Index() {
       </div>
 
       {/* HERO */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${COUPLE_PHOTO})`, filter: "brightness(0.45) saturate(0.8)" }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{ background: "linear-gradient(to bottom, rgba(253,248,244,0.15) 0%, rgba(253,248,244,0.05) 50%, rgba(253,248,244,0.7) 100%)" }}
-        />
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden" style={{ background: "#1a0d12" }}>
+        {/* Фоновый градиент */}
+        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at center, rgba(138,64,96,0.25) 0%, rgba(26,13,18,0.95) 70%)" }} />
 
-        <div className="absolute top-6 left-6 text-4xl opacity-60">🌿</div>
-        <div className="absolute top-6 right-6 text-4xl opacity-60" style={{ transform: "scaleX(-1)" }}>🌿</div>
-        <div className="absolute bottom-24 left-6 text-3xl opacity-50">🌸</div>
-        <div className="absolute bottom-24 right-6 text-3xl opacity-50">🌸</div>
+        {/* Декор углы */}
+        <div className="absolute top-5 left-5 text-3xl opacity-40">🌸</div>
+        <div className="absolute top-5 right-5 text-3xl opacity-40">🌸</div>
+        <div className="absolute bottom-20 left-5 text-2xl opacity-30">🌿</div>
+        <div className="absolute bottom-20 right-5 text-2xl opacity-30">🌿</div>
 
-        <div className="relative z-10 text-center px-6 max-w-3xl">
-          <p
-            className="font-caveat text-xl mb-4 tracking-widest opacity-0"
-            style={{ color: "#f9d4e2", animationName: "fadeIn", animationDuration: "1.2s", animationDelay: "0.3s", animationFillMode: "forwards" }}
-          >
+        {/* Верхняя подпись */}
+        <div
+          className="relative z-10 text-center mb-8 opacity-0"
+          style={{ animationName: "fadeIn", animationDuration: "1.2s", animationDelay: "0.3s", animationFillMode: "forwards" }}
+        >
+          <p className="font-caveat text-xl tracking-widest" style={{ color: "#f9d4e2" }}>
             приглашаем вас на нашу свадьбу
           </p>
-          <h1
-            className="font-cormorant font-light leading-none opacity-0"
-            style={{
-              fontSize: "clamp(3.5rem, 10vw, 7rem)",
-              color: "#fff8f5",
-              textShadow: "0 2px 30px rgba(0,0,0,0.3)",
-              animationName: "fadeUp",
-              animationDuration: "1.2s",
-              animationDelay: "0.5s",
-              animationFillMode: "forwards",
-            }}
-          >
-            Руслан & Анастасия
-          </h1>
+        </div>
+
+        {/* Центральный блок: имя — фото — имя */}
+        <div className="relative z-10 flex items-center justify-center gap-6 md:gap-12 px-4 w-full max-w-5xl">
+
+          {/* Имя жениха — слева */}
           <div
-            className="flex items-center justify-center gap-4 mt-6 opacity-0"
-            style={{ animationName: "fadeIn", animationDuration: "1s", animationDelay: "1s", animationFillMode: "forwards" }}
+            className="flex-shrink-0 text-center opacity-0"
+            style={{ animationName: "fadeUp", animationDuration: "1s", animationDelay: "0.6s", animationFillMode: "forwards" }}
           >
-            <div className="h-px w-16" style={{ background: "rgba(249,212,226,0.7)" }} />
-            <span className="font-cormorant text-2xl italic font-light" style={{ color: "#f9d4e2" }}>1 августа 2026</span>
-            <div className="h-px w-16" style={{ background: "rgba(249,212,226,0.7)" }} />
+            <p className="font-caveat text-lg md:text-2xl mb-1" style={{ color: "#f9d4e2", opacity: 0.75 }}>жених</p>
+            <h2
+              className="font-cormorant font-light"
+              style={{ fontSize: "clamp(2rem, 5vw, 4rem)", color: "#fff8f5", textShadow: "0 2px 20px rgba(0,0,0,0.5)", lineHeight: 1.1 }}
+            >
+              Руслан
+            </h2>
+            <div className="mt-3 mx-auto h-px w-12" style={{ background: "linear-gradient(to right, transparent, #e0a0c0, transparent)" }} />
           </div>
-          <p
-            className="mt-4 text-lg font-light opacity-0"
-            style={{ color: "rgba(255,240,235,0.85)", animationName: "fadeIn", animationDuration: "1s", animationDelay: "1.3s", animationFillMode: "forwards" }}
+
+          {/* Фото по центру */}
+          <div
+            className="flex-shrink-0 opacity-0"
+            style={{ animationName: "fadeIn", animationDuration: "1.4s", animationDelay: "0.4s", animationFillMode: "forwards" }}
           >
-            Санкт-Петербург, ЗАГС Красносельского района
+            <div
+              className="relative overflow-hidden"
+              style={{
+                width: "clamp(200px, 35vw, 380px)",
+                aspectRatio: "3/4",
+                borderRadius: "50% 50% 48% 48% / 40% 40% 60% 60%",
+                border: "3px solid rgba(224,160,192,0.4)",
+                boxShadow: "0 0 60px rgba(138,64,96,0.4), 0 0 120px rgba(138,64,96,0.15)",
+              }}
+            >
+              <img
+                src={COUPLE_PHOTO}
+                alt="Руслан и Анастасия"
+                className="w-full h-full object-cover object-top"
+              />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 60%, rgba(26,13,18,0.5) 100%)" }} />
+            </div>
+            {/* Сердечко */}
+            <div className="text-center mt-4 text-2xl animate-bounce">💕</div>
+          </div>
+
+          {/* Имя невесты — справа */}
+          <div
+            className="flex-shrink-0 text-center opacity-0"
+            style={{ animationName: "fadeUp", animationDuration: "1s", animationDelay: "0.8s", animationFillMode: "forwards" }}
+          >
+            <p className="font-caveat text-lg md:text-2xl mb-1" style={{ color: "#f9d4e2", opacity: 0.75 }}>невеста</p>
+            <h2
+              className="font-cormorant font-light"
+              style={{ fontSize: "clamp(2rem, 5vw, 4rem)", color: "#fff8f5", textShadow: "0 2px 20px rgba(0,0,0,0.5)", lineHeight: 1.1 }}
+            >
+              Анастасия
+            </h2>
+            <div className="mt-3 mx-auto h-px w-12" style={{ background: "linear-gradient(to right, transparent, #e0a0c0, transparent)" }} />
+          </div>
+        </div>
+
+        {/* Дата и место */}
+        <div
+          className="relative z-10 text-center mt-10 opacity-0"
+          style={{ animationName: "fadeIn", animationDuration: "1s", animationDelay: "1.2s", animationFillMode: "forwards" }}
+        >
+          <div className="flex items-center justify-center gap-4 mb-3">
+            <div className="h-px w-12 md:w-20" style={{ background: "rgba(249,212,226,0.4)" }} />
+            <span className="font-cormorant text-xl md:text-2xl italic font-light" style={{ color: "#f9d4e2" }}>1 августа 2026</span>
+            <div className="h-px w-12 md:w-20" style={{ background: "rgba(249,212,226,0.4)" }} />
+          </div>
+          <p className="text-sm md:text-base font-light tracking-widest" style={{ color: "rgba(255,240,235,0.6)" }}>
+            САНКТ-ПЕТЕРБУРГ
           </p>
         </div>
 
         <div
           className="absolute bottom-8 flex flex-col items-center gap-2 opacity-0"
-          style={{ animationName: "fadeIn", animationDuration: "1s", animationDelay: "1.6s", animationFillMode: "forwards" }}
+          style={{ animationName: "fadeIn", animationDuration: "1s", animationDelay: "1.8s", animationFillMode: "forwards" }}
         >
-          <span className="text-xs tracking-widest font-light" style={{ color: "rgba(255,240,235,0.6)" }}>ЛИСТАЙТЕ ВНИЗ</span>
-          <Icon name="ChevronDown" size={20} className="animate-bounce" style={{ color: "rgba(255,240,235,0.6)" } as React.CSSProperties} />
+          <span className="text-xs tracking-widest font-light" style={{ color: "rgba(255,240,235,0.4)" }}>ЛИСТАЙТЕ ВНИЗ</span>
+          <Icon name="ChevronDown" size={20} className="animate-bounce" style={{ color: "rgba(255,240,235,0.4)" } as React.CSSProperties} />
         </div>
       </section>
 
