@@ -184,9 +184,9 @@ export default function Index() {
 
       {/* COUNTDOWN */}
       <AnimatedSection>
-        <section className="py-20 px-6" style={{ background: "#fff0f3" }}>
+        <section className="py-20 px-6" style={{ background: "linear-gradient(135deg, #f8c8d8 0%, #f0a0c0 100%)" }}>
           <div className="max-w-4xl mx-auto text-center">
-            <p className="font-caveat text-2xl mb-2" style={{ color: "#c97fa8" }}>до нашего дня осталось</p>
+            <p className="font-caveat text-2xl mb-2" style={{ color: "#7a2050" }}>до нашего дня осталось</p>
             <div className="flex justify-center gap-6 flex-wrap mt-6">
               {[
                 { label: "дней", value: countdown.days },
@@ -211,10 +211,10 @@ export default function Index() {
 
       {/* WEDDING INFO */}
       <AnimatedSection>
-        <section className="py-24 px-6">
+        <section className="py-24 px-6" style={{ background: "linear-gradient(160deg, #fde8f0 0%, #fbd0e8 50%, #f9c0e0 100%)" }}>
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <p className="font-caveat text-xl" style={{ color: "#c97fa8" }}>детали торжества</p>
+              <p className="font-caveat text-xl" style={{ color: "#a02060" }}>детали торжества</p>
               <h2 className="font-cormorant text-5xl font-light mt-2" style={{ color: "#5a2a3a" }}>Наш особенный день</h2>
               <div className="flex justify-center mt-4">
                 <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, #e0a0c0, transparent)" }} />
@@ -250,11 +250,11 @@ export default function Index() {
 
       {/* SCHEDULE */}
       <AnimatedSection>
-        <section className="py-24 px-6" style={{ background: "#fdf4f8" }}>
+        <section className="py-24 px-6" style={{ background: "linear-gradient(160deg, #e8d0f0 0%, #d8b8e8 50%, #c8a0e0 100%)" }}>
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-16">
-              <p className="font-caveat text-xl" style={{ color: "#c97fa8" }}>распорядок дня</p>
-              <h2 className="font-cormorant text-5xl font-light mt-2" style={{ color: "#5a2a3a" }}>График торжества</h2>
+              <p className="font-caveat text-xl" style={{ color: "#6a2080" }}>распорядок дня</p>
+              <h2 className="font-cormorant text-5xl font-light mt-2" style={{ color: "#3a1060" }}>График торжества</h2>
               <div className="flex justify-center mt-4">
                 <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, #e0a0c0, transparent)" }} />
               </div>
@@ -291,11 +291,11 @@ export default function Index() {
 
       {/* GALLERY */}
       <AnimatedSection>
-        <section className="py-24 px-6" style={{ background: "#fdf4f8" }}>
+        <section className="py-24 px-6" style={{ background: "linear-gradient(160deg, #fce0b0 0%, #f8c890 50%, #f4b070 100%)" }}>
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <p className="font-caveat text-xl" style={{ color: "#c97fa8" }}>воспоминания</p>
-              <h2 className="font-cormorant text-5xl font-light mt-2" style={{ color: "#5a2a3a" }}>Наша галерея</h2>
+              <p className="font-caveat text-xl" style={{ color: "#8a3010" }}>воспоминания</p>
+              <h2 className="font-cormorant text-5xl font-light mt-2" style={{ color: "#5a1800" }}>Наша галерея</h2>
               <div className="flex justify-center mt-4">
                 <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, #e0a0c0, transparent)" }} />
               </div>
@@ -330,7 +330,7 @@ export default function Index() {
       <AnimatedSection>
         <section
           className="py-24 px-6 text-center relative overflow-hidden"
-          style={{ background: "linear-gradient(135deg, #5a2a3a 0%, #8a4060 50%, #5a2a3a 100%)" }}
+          style={{ background: "linear-gradient(135deg, #8a1040 0%, #c03070 40%, #8a1040 100%)" }}
         >
           <div className="absolute inset-0 flex flex-wrap gap-8 items-center justify-center pointer-events-none overflow-hidden" style={{ opacity: 0.08, fontSize: "5rem" }}>
             {["🌸", "🌿", "🌹", "💐", "🌸", "🌿", "🌹", "💐"].map((e, i) => (
