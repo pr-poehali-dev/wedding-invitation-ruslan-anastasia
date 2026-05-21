@@ -43,11 +43,6 @@ const schedule = [
   { time: "17:30", icon: "UtensilsCrossed", title: "Торжественный ужин", desc: "Праздничный банкет в честь молодожёнов", color: "#c4d4e8" },
 ];
 
-const loveStory = [
-  { year: "2019", title: "Первая встреча", text: "Мы встретились на вечеринке общих друзей. Один взгляд — и весь мир вокруг исчез.", img: STORY_PHOTO },
-  { year: "2021", title: "Первое путешествие", text: "Флоренция, тосканское вино и вечерние прогулки по мощёным улочкам...", img: VENUE_PHOTO },
-  { year: "2024", title: "Предложение", text: "На закате у моря, когда волны шептали наши имена, он встал на одно колено.", img: COUPLE_PHOTO },
-];
 
 const galleryImages = [
   { src: COUPLE_PHOTO, caption: "Наш день" },
@@ -264,46 +259,6 @@ export default function Index() {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </section>
-      </AnimatedSection>
-
-      {/* LOVE STORY */}
-      <AnimatedSection>
-        <section className="py-24 px-6">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <p className="font-caveat text-xl" style={{ color: "#c97fa8" }}>наша история</p>
-              <h2 className="font-cormorant text-5xl font-light mt-2" style={{ color: "#5a2a3a" }}>История любви</h2>
-              <div className="flex justify-center mt-4">
-                <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, #e0a0c0, transparent)" }} />
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-16">
-              {loveStory.map((item, i) => (
-                <div
-                  key={i}
-                  className={`flex gap-10 items-center flex-col ${i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"}`}
-                >
-                  <div className="md:w-1/2 w-full">
-                    <div className="relative rounded-3xl overflow-hidden" style={{ aspectRatio: "4/3" }}>
-                      <img src={item.img} alt={item.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-                      <div
-                        className="absolute inset-0"
-                        style={{ background: "linear-gradient(to top, rgba(90,42,58,0.35) 0%, transparent 60%)" }}
-                      />
-                    </div>
-                  </div>
-                  <div className="md:w-1/2 w-full flex flex-col justify-center">
-                    <span className="font-caveat text-5xl" style={{ color: "#e8b0cc" }}>{item.year}</span>
-                    <h3 className="font-cormorant text-3xl font-light mt-2" style={{ color: "#5a2a3a" }}>{item.title}</h3>
-                    <div className="h-px w-16 my-4" style={{ background: "#e8c0d0" }} />
-                    <p className="font-light leading-relaxed text-lg" style={{ color: "#7a5060" }}>{item.text}</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </section>
